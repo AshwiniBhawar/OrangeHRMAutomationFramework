@@ -18,18 +18,16 @@ public class AdminModulePageTest extends BaseTest {
 	}
 
 	@Test
-	public void validatePIMHeaderTest() {
+	public void validateAdminHeaderTest() {
 		String actualHeaderValue = dashboardPage.selectAdminModuleValue().getAdminPageHeader();
-		System.out.println(actualHeaderValue);
 		Assert.assertEquals(actualHeaderValue, AppConstants.ADMIN_MODULE_HEADER_TEXT);
 	}
 
-//	@Test
-//	public void validateConfiguartionDropdownListTest() {
-//		List<String> actualList = dashboardPage.selectAdminModuleValue().getHeaderList();
-//		System.out.println(actualList);
-//		//Assert.assertEquals(actualList, AppConstants.CONFIGURATION_DROPDOWN_LIST);
-//	}
+	@Test
+	public void validateHeadersListTest() {
+		List<String> actualList = dashboardPage.selectAdminModuleValue().getHeaderList();
+		Assert.assertEquals(actualList, AppConstants.ADMIN_HEADERS_LIST);
+	}
 
 	
 }

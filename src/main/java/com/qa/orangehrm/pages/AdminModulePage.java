@@ -25,7 +25,7 @@ public class AdminModulePage {
 	
 	private final By adminheaderLocator=By.cssSelector("span.oxd-topbar-header-breadcrumb");
 			//By.tagName("h6");
-	private final By confiHeaderLocator= By.xpath("///div[@class='oxd-topbar-body']//li");
+	private final By confiHeaderLocator= By.xpath("//div[@class='oxd-topbar-body']//li");
 		
 		
 	public String getAdminPageHeader() {
