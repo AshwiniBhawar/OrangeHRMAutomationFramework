@@ -20,6 +20,7 @@ public class DashboardPage {
 	
 	private final By headerLocator=By.tagName("h6");
 	private final By pimModuleLocator= By.xpath("//a[normalize-space()='PIM']/span");
+	private final By adminModuleLocator=By.xpath("//a[normalize-space()='Admin']/span");
 	
 	public String getDashboardPageUrl() {
 		String url=eUtil.waitForURLContains(AppConstants.DASHBOARD_PAGE_FRACTION_URL, AppConstants.DEFAULT_SHORT_WAIT);
@@ -37,6 +38,12 @@ public class DashboardPage {
 		log.info("select PIM from the left hand side menu");
 		eUtil.waitForElementVisible(pimModuleLocator, AppConstants.DEFAULT_MEDIUM_WAIT).click();
 		return new PIMModulePage(driver);
+	}
+	
+	public AdminModulePage selectAdminModuleValue() {
+		log.info("select ADMIN from the left hand side menu");
+		eUtil.waitForElementVisible(adminModuleLocator, AppConstants.DEFAULT_MEDIUM_WAIT).click();
+		return new AdminModulePage(driver);
 	}
 	
 }
