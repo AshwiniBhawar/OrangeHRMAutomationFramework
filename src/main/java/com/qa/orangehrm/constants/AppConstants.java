@@ -15,6 +15,7 @@ public class AppConstants {
 
 	public static final String DASHBOARD_MODULE_HEADER_TEXT="Dashboard";
 	public static final String PIM_MODULE_HEADER_TEXT="PIM";
+	public static final String ADMIN_MODULE_HEADER_TEXT="Admin\n"+"User Management";
 	public static final String DELETE_EMPLOYEE_SUCCESS_MSG="Success\n"+"Successfully Deleted";
 	public static final String ADD_EMPLOYEE_SUCCESS_MSG="Success\n"+"Successfully Saved";
 	public static final String NO_EMPLOYEE_RECORD_FOUND_TEST="Info\n"+"No Records Found";
