@@ -29,7 +29,9 @@ public class AdminModulePage {
 		
 		
 	public String getAdminPageHeader() {
-		return eUtil.waitForElementVisible(adminheaderLocator, AppConstants.DEFAULT_MEDIUM_WAIT).getText();
+		String text=eUtil.waitForElementVisible(adminheaderLocator, AppConstants.DEFAULT_MEDIUM_WAIT).getText();
+		log.info("Admin page header is: "+ text );
+		return text;
 	}
 	
 	public List<String> getHeaderList() {

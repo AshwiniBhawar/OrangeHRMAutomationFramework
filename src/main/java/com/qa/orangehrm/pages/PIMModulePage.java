@@ -40,7 +40,9 @@ public class PIMModulePage {
 	//.oxd-button.oxd-button--medium.oxd-button--secondary:nth-of-type(1)
 	
 	public String getPIMPageHeader() {
-		return eUtil.waitForElementVisible(pimheaderLocator, AppConstants.DEFAULT_MEDIUM_WAIT).getText();
+		String text=eUtil.waitForElementVisible(pimheaderLocator, AppConstants.DEFAULT_MEDIUM_WAIT).getText();
+		log.info("PIM page header is: "+ text );
+		return text;
 	}
 	
 	public List<String> getConfigurationList() {
